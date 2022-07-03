@@ -6,4 +6,5 @@
 
 ### En una terminal cmd o powershell instalar vue con los siguientes comando:
 > npm install vue
+
 > npm install -g @vue/cli
