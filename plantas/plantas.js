@@ -8,12 +8,48 @@ var osm = L.tileLayer(
   }
 );
 
+// var municipio = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+//   layers: "Municipios",
+//   format: "image/png",
+//   transparent: true,
+//   tiled: true,
+//   styles:'style_municipios',
+//   attribution: "Natural Earth",
+// });
+
+var fuentes = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+  layers: "Fuentes",
+  format: "image/png",
+  transparent: true,
+  tiled: true,
+  styles:'style_fuentes',
+  attribution: "Natural Earth",
+});
+
+// var energy = L.tileLayer.wms("http://localhost:8080/geoserver/sig/wms", {
+//   layers: "total_energy",
+//   format: "image/png",
+//   transparent: true,
+//   tiled: true,
+//   styles:'style_fuentes',
+//   attribution: "Natural Earth",
+// });
+
+var rios = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+  layers: "Rios",
+  format: "image/png",
+  transparent: true,
+  tiled: true,
+  styles: 'style_rios',
+  attribution: "Natural Earth",
+});
+
 let config = {
   center: [13.683056, -88.926667],
   minZoom: 9,
   maxZoom: 12,
   zoom: 9,
-  layers: [osm],
+  layers: [osm, fuentes],
   scrollWheelZoom: true,
 };
 
@@ -103,14 +139,14 @@ function generateButton(name) {
 generateButton(layersButton);
 
 // add data to geoJSON layer and add to LayerGroup
-const arrayLayers = ["Hidroélectrica", "Eólica", "Geotérmica","Térmica", "Solar"];
+// const arrayLayers = ["Hidroélectrica", "Eólica", "Geotérmica","Térmica", "Solar"];
 
-arrayLayers.map((json) => {
-  generateButton(json);
-  fetchData(`./data/${json}.json`).then((data) => {
-    window["layer_" + json] = L.geoJSON(data, geojsonOpts).addTo(map);
-  });
-});
+// arrayLayers.map((json) => {
+//   generateButton(json);
+//   fetchData(`./data/${json}.json`).then((data) => {
+//     window["layer_" + json] = L.geoJSON(data, geojsonOpts).addTo(map);
+//   });
+// });
 
 document.addEventListener("click", (e) => {
   const target = e.target;

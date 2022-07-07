@@ -7,10 +7,8 @@
   <title>Energías Renovable SV</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-  <link rel="stylesheet" href="/style.css">
-  <link href="./Sidebar/sidebars.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="/plantas/style.css">
+  <link href="/Sidebar/sidebars.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
@@ -29,12 +27,12 @@
       <hr>
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item ">
-          <a href="./index.html" class="nav-link text-white" aria-current="page">
+          <a href="/index.html" class="nav-link text-white" aria-current="page">
             El Salvador
           </a>
         </li>
         <li class="nav-item">
-          <a href="./plantas/Plantas.html" class="nav-link text-white ">
+          <a href="/plantas/Plantas.html" class="nav-link text-white ">
             Plantas Electricas
           </a>
         </li>
@@ -69,20 +67,20 @@
         <a href="https://github.com/DianaSanchez1103/LasBichotas_proyecto_SIG_ACA">
           <div class="position-absolute top-50 start-50 translate-middle">
             <strong>Las Bichotas</strong>
-            <img src="Assets/white_github.png"></img>
+            <img src="/Assets/white_github.png"></img>
           </div>
         </a>
       </div>
     </div>
-    <div id="map"></div>
-    <div></div>
-    <main class="d-flex flex-nowrap">
-      <h1 class="visually-hidden">Sidebars examples</h1>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
-      <script src="./Sidebar/script.js"></script>
-      <script src="script.js"></script>
+    <div class="container">
+      <div id="map"></div>
+      <!-- <ul class="layers"></ul> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"></script>
+    <script src="/Sidebar/script.js"></script>
+    <script src="eolica.js"></script>
 </body>
 
 </html>
