@@ -153,4 +153,3 @@ function checkedType(id, type) {
 
   document.querySelector(`#${id}`).checked = type;
 }
- 
