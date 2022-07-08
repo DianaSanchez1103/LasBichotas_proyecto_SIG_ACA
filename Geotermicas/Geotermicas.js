@@ -17,13 +17,21 @@ var geotermica = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
   attribution: "Natural Earth",
 });
 
+var energia = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+  layers: "Geotermica",
+  format: "image/png",
+  transparent: true,
+  tiled: true,
+  styles:'style_energy',
+  attribution: "Natural Earth",
+});
 
 let config = {
   center: [13.683056, -88.926667],
   minZoom: 9,
   maxZoom: 16,
   zoom: 9,
-  layers: [osm, geotermica],
+  layers: [osm, geotermica, energia],
   scrollWheelZoom: true,
 };
 
