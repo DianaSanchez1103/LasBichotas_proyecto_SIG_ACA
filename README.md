@@ -4,11 +4,11 @@
 
 ### Herramientas y licencias 
 
-###[Leaflet](https://leafletjs.com/)
+### [Leaflet](https://leafletjs.com/)
 Es una biblioteca JavaScript de código abierto ampliamente utilizada para crear aplicaciones de mapeo web. Lanzado por primera vez en 2011, es compatible con la mayoría de las plataformas móviles y de escritorio, compatible con HTML5 y CSS3.
 Licencia: BSD-2-Clause
 
-### [OpenStreetMap]https://www.openstreetmap.org/
+### [OpenStreetMap](https://www.openstreetmap.org/)
 OpenStreetMap (también conocido como OSM) es un proyecto colaborativo para crear mapas editables y libres. En lugar del mapa en sí, los datos generados por el proyecto se consideran su salida principal.
 Los mapas se crean utilizando información geográfica capturada con dispositivos GPS móviles, ortofotografías y otras fuentes libres. Esta cartografía, tanto las imágenes creadas como los datos vectoriales almacenados en su base de datos.
 Licencia: icencia abierta Licencia Abierta de Bases de Datos (ODbL).
