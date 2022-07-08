@@ -20,7 +20,7 @@ var fuentes = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
 let config = {
   center: [13.683056, -88.926667],
   minZoom: 9,
-  maxZoom: 12,
+  maxZoom: 16,
   zoom: 9,
   layers: [osm, fuentes],
   scrollWheelZoom: true,

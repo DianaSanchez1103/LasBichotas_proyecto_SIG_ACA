@@ -11,7 +11,7 @@ var osm = L.tileLayer(
 let config = {
   center: [13.683056, -88.926667],
   minZoom: 9,
-  maxZoom: 12,
+  maxZoom: 16,
   zoom: 9,
   layers: [osm],
   scrollWheelZoom: true,
