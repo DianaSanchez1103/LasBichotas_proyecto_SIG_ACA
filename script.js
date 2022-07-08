@@ -42,13 +42,3 @@ map.setMaxBounds(map.getBounds());
 
 // zoom the map to the polyline
 map.fitBounds(getBounds(), { reset: true });
-
-var legend = L.control({position: 'bottomright'});
-legend.onAdd = function (map) {
- var div = L.DomUtil.create('div', 'info legend');
- div.innerHTML +=
- '<img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=10&HEIGHT=10&LAYER=cnr:Fuentes&legend_options=fontName:Times%20New%20Roman;fontAntiAliasing:true;fontColor:0x000033;fontSize:14;bgColor:0xFFFFEE;dpi:180">';
- return div;
-};
-legend.addTo(map);
-
