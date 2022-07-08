@@ -8,14 +8,14 @@ var osm = L.tileLayer(
   }
 );
 
-// var municipio = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
-//   layers: "Municipios",
-//   format: "image/png",
-//   transparent: true,
-//   tiled: true,
-//   styles:'style_municipios',
-//   attribution: "Natural Earth",
-// });
+var termicas = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+  layers: "Termicas",
+  format: "image/png",
+  transparent: true,
+  tiled: true,
+  styles:'style_termica',
+  attribution: "Natural Earth",
+});
 
 var fuentes = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
   layers: "Fuentes",
@@ -26,30 +26,49 @@ var fuentes = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
   attribution: "Natural Earth",
 });
 
-// var energy = L.tileLayer.wms("http://localhost:8080/geoserver/sig/wms", {
-//   layers: "total_energy",
-//   format: "image/png",
-//   transparent: true,
-//   tiled: true,
-//   styles:'style_fuentes',
-//   attribution: "Natural Earth",
-// });
-
-var rios = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
-  layers: "Rios",
+var solar = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+  layers: "Solar",
   format: "image/png",
   transparent: true,
   tiled: true,
-  styles: 'style_rios',
+  styles:'style_solar',
   attribution: "Natural Earth",
 });
+
+var eolica = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+  layers: "Eolica",
+  format: "image/png",
+  transparent: true,
+  tiled: true,
+  styles:'style_eolica',
+  attribution: "Natural Earth",
+});
+
+var geotermica = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+  layers: "Geotermica",
+  format: "image/png",
+  transparent: true,
+  tiled: true,
+  styles:'style_geotermica',
+  attribution: "Natural Earth",
+});
+
+var hidroelectrica = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+  layers: "Hidroelectricas",
+  format: "image/png",
+  transparent: true,
+  tiled: true,
+  styles:'style_hidroelectrica',
+  attribution: "Natural Earth",
+});
+
 
 let config = {
   center: [13.683056, -88.926667],
   minZoom: 9,
   maxZoom: 16,
   zoom: 9,
-  layers: [osm, fuentes],
+  layers: [osm, solar, eolica, geotermica, hidroelectrica, termicas],
   scrollWheelZoom: true,
 };
 

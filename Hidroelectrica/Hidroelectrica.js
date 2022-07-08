@@ -8,12 +8,12 @@ var osm = L.tileLayer(
   }
 );
 
-var fuentes = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+var hidroelectrica = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
   layers: "Hidroelectricas",
   format: "image/png",
   transparent: true,
   tiled: true,
-  styles:'style_fuentes',
+  styles:'style_hidroelectrica',
   attribution: "Natural Earth",
 });
 
@@ -22,7 +22,7 @@ let config = {
   minZoom: 9,
   maxZoom: 16,
   zoom: 9,
-  layers: [osm, fuentes],
+  layers: [osm, hidroelectrica],
   scrollWheelZoom: true,
 };
 
