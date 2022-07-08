@@ -23,3 +23,16 @@ Licencia:  GNU General Public License
 Bootstrap, es un framework originalmente creado por Twitter, que permite crear interfaces web con CSS y JavaScript, cuya particularidad es la de adaptar la interfaz del sitio web al tamaño del dispositivo en que se visualice.
 
 Licencia: MIT
+
+### [PostgreSQL](https://www.postgresql.org/)
+ sistema de gestión de bases de datos relacional orientado a objetos y de código abierto
+
+Licencia: BSD
+
+## Contribuidores
+
+- Gerardo Chinchilla
+- Carlos Estevez
+- Diana Sánchez
+- Fernando Vásquez
+- Carmen Yanes
