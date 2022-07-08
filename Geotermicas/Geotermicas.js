@@ -8,12 +8,12 @@ var osm = L.tileLayer(
   }
 );
 
-var fuentes = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+var geotermica = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
   layers: "Geotermica",
   format: "image/png",
   transparent: true,
   tiled: true,
-  styles:'style_fuentes',
+  styles:'style_geotermica',
   attribution: "Natural Earth",
 });
 
@@ -23,7 +23,7 @@ let config = {
   minZoom: 9,
   maxZoom: 12,
   zoom: 9,
-  layers: [osm, fuentes],
+  layers: [osm, geotermica],
   scrollWheelZoom: true,
 };
 

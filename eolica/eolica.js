@@ -8,12 +8,12 @@ var osm = L.tileLayer(
   }
 );
 
-var fuentes = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
+var eolica = L.tileLayer.wms("http://localhost:8080/geoserver/cnr/wms", {
   layers: "Eolica",
   format: "image/png",
   transparent: true,
   tiled: true,
-  styles:'style_fuentes',
+  styles:'style_eolica',
   attribution: "Natural Earth",
 });
 
@@ -22,7 +22,7 @@ let config = {
   minZoom: 9,
   maxZoom: 12,
   zoom: 9,
-  layers: [osm, fuentes],
+  layers: [osm, eolica],
   scrollWheelZoom: true,
 };
 
